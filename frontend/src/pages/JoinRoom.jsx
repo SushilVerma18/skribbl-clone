@@ -14,7 +14,7 @@ export default function JoinRoom() {
 
       <button
         onClick={async () => {
-          const r = await joinRoom(state.code, {
+          const r = await joinRoom(state.code.trim().toUpperCase(), {
             playerName: state.name,
           });
 
