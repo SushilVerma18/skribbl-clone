@@ -1,0 +1,1 @@
+export default function WordSelection({options,onChoose}){return <div className="wordbox"><h2>Choose a word</h2>{options.map(w=><button key={w} onClick={()=>onChoose(w)}>{w}</button>)}</div>}

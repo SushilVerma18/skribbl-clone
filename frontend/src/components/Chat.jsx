@@ -1,0 +1,2 @@
+import{useState}from"react";
+export default function Chat({messages=[],send}){const[v,setV]=useState("");return <div className="panel"><h3>Chat / Guess</h3><div className="messages">{messages.map((m,i)=><div key={i}><b>{m.playerName||"System"}:</b> {m.text||m.type}</div>)}</div><form onSubmit={e=>{e.preventDefault();if(v.trim()){send(v.trim());setV("")}}}><input value={v} onChange={e=>setV(e.target.value)} placeholder="Guess..."/><button>Send</button></form></div>}

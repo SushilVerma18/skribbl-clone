@@ -1,0 +1,1 @@
+export default function PlayerList({players=[],hostId}){return <div className="panel"><h3>Players</h3>{players.map(p=><div className="row" key={p.id}><span>{p.name}{p.id===hostId?" 👑":""}</span><span>{p.score} {p.ready?"✓":""}</span></div>)}</div>}

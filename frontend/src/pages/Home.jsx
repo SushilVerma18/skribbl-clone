@@ -1,0 +1,2 @@
+import{useState}from"react";import{useNavigate}from"react-router-dom";
+export default function Home(){const[n,setN]=useState(""),[c,setC]=useState(""),nav=useNavigate();return <main className="card"><h1>🎨 Skribbl.io Clone</h1><input placeholder="Your name" value={n} onChange={e=>setN(e.target.value)}/><button onClick={()=>n.trim()&&nav("/create",{state:{name:n}})}>Create Room</button><hr/><input placeholder="Room code" value={c} onChange={e=>setC(e.target.value.toUpperCase())}/><button onClick={()=>n.trim()&&c&&nav("/join",{state:{name:n,code:c}})}>Join Room</button></main>}
